@@ -12,7 +12,7 @@ async function bootstrap() {
 
    // Custom CORS configuration
    app.enableCors({
-     origin: 'http://localhost:3000', // Replace with your client URL
+     origin: process.env.FRONT_END_URL, // Replace with your client URL
      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
      allowedHeaders: 'Authorization,Content-Type',
      credentials: true,
